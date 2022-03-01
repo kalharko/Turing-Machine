@@ -1,0 +1,24 @@
+# B as blank
+
+input : B
+start-state : S
+
+S:
+B,1,0,x,e | pe,r,pe,r,p0,r,r,p0,l,l | o
+
+o:
+1 | r,px,l,l,l | o
+0 |            | q
+
+q:
+0,1 | r,r  | q
+B   | p1,l | p
+
+p:
+x   | e,r | q
+e   | r   | f
+B   | l,l | p
+
+f:
+1,0,x,e | r,r    | f
+B       | p0,l,l | o
