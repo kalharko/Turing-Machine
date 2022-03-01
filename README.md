@@ -23,7 +23,7 @@ To install, download this github repository and get inside it :
 `git clone https://github.com/kalharko/cursesTuringMachine`  
 `cd cursesTuringMachine`
 
-To use, run the python file called `cursesTM.py` from inside the cursesTuringMachine folder:  
+To use, run the python file called `ctm.py` from inside the cursesTuringMachine folder:  
  `python ctm.py <program file path>`  
  ex : `python ctm.py Examples/prog2.txt`
 
