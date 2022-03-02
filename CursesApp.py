@@ -7,11 +7,6 @@ class CursesApp() :
     def __init__(self, stdscr, tm):
         self.tm = tm
 
-        # encoding
-        locale.setlocale(locale.LC_ALL, 'fr_FR.UTF-8')
-        self.code = locale.getpreferredencoding()
-        curses.curs_set(0)
-
         # constants
         self.ESCAPE = ['q']
 
