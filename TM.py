@@ -67,10 +67,11 @@ class TM :
         self.tape.clear()
         i = 0
         for char in self.input :
-            if char == ' ' :
+            if char == ' ' or char == 'B':
                 continue
             else :
                 self.tape[str(i)] = char
+                i += 1
 
 
     def step(self) :
