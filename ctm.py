@@ -1,19 +1,14 @@
 import sys, os
 
-from curses import wrapper
+from unicurses import *
 from CursesApp import CursesApp
 from TM import TM
 
 
 
 
-def main(stdscr):
-    stdscr.clear()
-    app = CursesApp(stdscr, tm)
-
-
-
 if __name__ == '__main__':
+    # Args
     if len(sys.argv) < 2:
         print('Not enough arguments given!')
         print('Usage: python ' + sys.argv[0] + ' <program file>')
@@ -25,6 +20,14 @@ if __name__ == '__main__':
         print(f'File not found : "{path}"')
         sys.exit()
 
+    # Turing Machine
     tm = TM(path)
 
-    wrapper(main)
+    # curses initialization
+    stdscr = initscr()
+    noecho()
+    cbreak()
+    curs_set(0)
+
+    # CursesApp launch
+    app = CursesApp(stdscr, tm)
