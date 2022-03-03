@@ -15,7 +15,7 @@ Screenshot of the app after 154 steps of the prog2.txt program.
 
 
 ## Dependencies
-Python3
+Python3, uni-curses
 
 ## Usage
 To install, download this github repository and get inside it :  
