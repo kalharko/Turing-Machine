@@ -23,7 +23,7 @@ class CursesApp() :
         # Exit
         werase(self.screen)
         refresh()
-        
+
 
 
     def mainLoop(self) :
@@ -70,5 +70,14 @@ class CursesApp() :
         for i,cell in enumerate(range(left_most_cell, right_most_cell)) :
             if str(cell) in self.tm.tape.keys() :
                 mvwaddch(self.screen, self.tapeH, i, self.tm.tape[str(cell)])
+
+        # machine states description
+        height = max([len(x) for x in self.tm.description]) + 1
+        x = 0
+        for state in self.tm.description :
+            for i,line in enumerate(state) :
+                mvwaddstr(self.screen, self.screenH-height+i, x, line)
+            x += max([len(line) for line in state]) + 5
+
 
         wrefresh(self.screen)

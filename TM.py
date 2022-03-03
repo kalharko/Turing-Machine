@@ -14,6 +14,8 @@ class TM :
 
         self.steps = 0
 
+        self.description = []
+
         self.path = path
         if path != None :
             self.open(path)
@@ -39,12 +41,15 @@ class TM :
                 # Enter new state definition
                 elif line[-1] == ':' :
                     self.states.append(line[:-1])
+                    self.description.append([line])
 
                 else :
+                    self.description[-1].append(line)
                     # Clean extra spaces
                     line = line.split('|')
                     for i in range(len(line)) :
                         line[i] = line[i].lstrip(' ').rstrip(' ')
+
 
                     # Read line info
                     symbol = line[0].split(',')
