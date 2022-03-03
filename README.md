@@ -8,11 +8,10 @@ A ncurses application written in python to simulate a turing machine.
 Screenshot of the app after 154 steps of the prog2.txt program.
 
 ## **Known Problems**
-- Not tested on Windows yet.
+-
 
 ## **Planed features**
-- Error checking in program befor running it.
-- Travel on the tape to display cells further from the head.
+-
 
 
 ## Dependencies
