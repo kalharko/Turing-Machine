@@ -1,0 +1,9 @@
+# B as blank
+
+input : B
+start-state : S
+
+S:
+B | p0   | S
+0 | r,p1 | S
+1 | r,p0 | S

@@ -1,0 +1,18 @@
+input: 1011
+start-state: right
+
+
+# scan to the rightmost digit
+right:
+1,0 | r | right
+B   | l | carry
+
+# then carry the 1
+carry:
+1   | p0,L | carry
+0,B | p1,L | done
+
+
+# dead state
+done:
+B,0,1 | | done
