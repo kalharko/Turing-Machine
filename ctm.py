@@ -31,3 +31,6 @@ if __name__ == '__main__':
 
     # CursesApp launch
     app = CursesApp(stdscr, tm)
+
+    curs_set(1)
+    nocbreak()
